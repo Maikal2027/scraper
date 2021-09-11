@@ -13,17 +13,16 @@ import pymongo
 
 
 '''
-This bot is developed by @BARROSOE, it is the first version deployed for public scraping,
-now it is an obsolete version for my work environment, that's why I post it for free.
+This bot is EDITED by MOTIPAAK.
 
 
 ---------------Deploy on Heroku
 
 -Secret keys: 
-	-TOKEN: 123:ABC
+	-TOKEN: 1678104394:AAGxEMs-vQsISRV_idKy5VDptP7N1QfVpz0
 	- MODE: prod
-	- CHAT_ID_FORWARD: -1111
-	- HEROKU_APP_NAME: (HEROKU APP NAME)
+	- CHAT_ID_FORWARD: -1001493350637
+	- HEROKU_APP_NAME: (forwardernigga)
 '''
 
 
@@ -32,7 +31,8 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-client = pymongo.MongoClient(
+client = pymongo.MongoClient("mongodb+srv://maya:motipaak79@motipaak.904du.mongodb.net/MotiPaak?retryWrites=true&w=majority")
+db = client.test
 	
 	)# MONGO DB LINK 
 db = client.credit_cards
@@ -61,7 +61,7 @@ else:
 
 @run_async
 def start(update):
-	update.message.reply_text("This CC Scraper has been started successfully | Developed by [𝕭𝖔𝕲] Emilio")
+	update.message.reply_text("This CC Scraper has been started successfully")
 
 @run_async
 def extrct(update, context):
